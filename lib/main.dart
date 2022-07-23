@@ -21,37 +21,18 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+class CampoPesquisa extends StatefulWidget {
+  const CampoPesquisa({ Key? key }) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  _CampoPesquisaState createState() => _CampoPesquisaState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _CampoPesquisaState extends State<CampoPesquisa> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 86,
-        elevation: 0,
-        backgroundColor: Color(0xffffdb15),
-        leading: Padding(
-          padding: const EdgeInsets.only(top: 5),
-          child: IconButton(
-            onPressed: () => Scaffold.of(context).openDrawer(),
-            icon: const Icon(
-              Icons.menu,
-              color: Colors.black,
-              size: 32,
-            ),
-          ),
-        ),
-        actions: [
-          Container(
-            width: MediaQuery.of(context).size.width - 110,
+    return Container(
+  width: MediaQuery.of(context).size.width - 110,
             padding: const EdgeInsets.only(top: 10),
             child: TextField(
               onSubmitted: (test) => {},
@@ -90,8 +71,41 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
+            ),      
+    );
+  }
+}
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+  
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 86,
+        elevation: 0,
+        backgroundColor: Color(0xffffdb15),
+        leading: Padding(
+          padding: const EdgeInsets.only(top: 5),
+          child: IconButton(
+            onPressed: () => Scaffold.of(context).openDrawer(),
+            icon: const Icon(
+              Icons.menu,
+              color: Colors.black,
+              size: 32,
             ),
           ),
+        ),
+        actions: [
+            CampoPesquisa(),
           Padding(padding: EdgeInsets.all(6)),
           Padding(
             padding: EdgeInsets.only(top: 10),
@@ -101,6 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
               size: 32,
             ),
           ),
+            
           Padding(padding: EdgeInsets.all(6)),
         ],
         bottom: PreferredSize(
