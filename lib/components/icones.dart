@@ -24,7 +24,7 @@ class _IconesState extends State<Icones> {
         ),
         padding: EdgeInsets.all(18),
         decoration: BoxDecoration(
-        color: selecionar? Colors.grey: Colors.yellow, 
+        color: selecionar? Colors.blue: Colors.white, 
         borderRadius: BorderRadius.circular(100)
       ),
       ),

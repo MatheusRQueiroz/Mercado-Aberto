@@ -88,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
              GestureDetector( child:Text(enviarpara),
              onTap: () => {
                setState(() => {
-                enviarpara = "Enviar P  ara 17 Rua Hermes da Fonseca"
+                enviarpara = "Enviar Para Rua Hermes Da Fonseca 17"
                }
                )
              }
@@ -138,13 +138,13 @@ class _MyHomePageState extends State<MyHomePage> {
                icone: Icons.castle,
              ),
              Icones(
+               icone: Icons.email,
+               ),
+               Icones(
+               icone: Icons.chair_alt
+               ),
+               Icones(
                icone: Icons.add,
-               ),
-               Icones(
-               icone: Icons.add_a_photo,
-               ),
-               Icones(
-               icone: Icons.dangerous,
                )
           ],)
           ],
