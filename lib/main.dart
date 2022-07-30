@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -36,6 +37,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String enviarpara = "Enviar Para";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,15 +76,23 @@ class _MyHomePageState extends State<MyHomePage> {
             color: Color(0xffffdb15),
             height: 40.0,
             child: Row(
-              children: const [
+              children:[
                 Padding(padding: EdgeInsets.all(5)),
                 Icon(
                   Icons.pin_drop_outlined,
                   size: 22,
                 ),
                 Padding(padding: EdgeInsets.all(5)),
-                Text("Enviar para"),
+              
                 
+             GestureDetector( child:Text(enviarpara),
+             onTap: () => {
+               setState(() => {
+                enviarpara = "Enviar P  ara 17 Rua Hermes da Fonseca"
+               }
+               )
+             }
+             )
               ],
             ),
           ),

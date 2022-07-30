@@ -13,7 +13,7 @@ class _IconesState extends State<Icones> {
     return GestureDetector(
       onTap: () => {
         setState(() => {
-
+          
           selecionar = !selecionar
         })
         },
