@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/components/card_frete_gratis.dart';
+import 'package:flutter_application_1/components/icones.dart';
 import 'components/campo_pesquisa.dart';
 import 'components/card_assinatura.dart';
+import 'components/icones.dart';
 
 void main() {
   runApp(const MyApp());
@@ -116,6 +118,24 @@ class _MyHomePageState extends State<MyHomePage> {
             const Padding(padding: EdgeInsets.all(5)),
             Frete (),
             const Padding(padding: EdgeInsets.all(10)),
+        
+          Row(children: [
+             Icones(
+               icone: Icons.card_travel
+               ),
+             Icones(
+               icone: Icons.castle,
+             ),
+             Icones(
+               icone: Icons.add,
+               ),
+               Icones(
+               icone: Icons.add_a_photo,
+               ),
+               Icones(
+               icone: Icons.dangerous,
+               )
+          ],)
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
