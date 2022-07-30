@@ -132,13 +132,13 @@ class _MyHomePageState extends State<MyHomePage> {
         
           Row(children: [
              Icones(
-               icone: Icons.card_travel
+               icone: Icons.microwave
                ),
              Icones(
-               icone: Icons.castle,
+               icone: Icons.bed,
              ),
              Icones(
-               icone: Icons.email,
+               icone: Icons.laptop,
                ),
                Icones(
                icone: Icons.chair_alt
